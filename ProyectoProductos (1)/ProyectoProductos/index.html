@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body class="bg-orange-300 h-screen">
+    <header class="text-center mb-6">
+      <h1 class="text-blue-600 text-4xl">Proyecto de Ana Gabriela Ibarra</h1>
+    </header>
+
+    <br /><br />
+
+    <form class="flex items-center justify-center">
+      <table class="bg-white p-6 rounded shadow-md">
+        <caption><span class="text-center mb-6 text-red-600">Ingrese los datos de los productos</span></caption>
+        <tr>
+          <td>Código:</td>
+          <td><input type="text" id="codigo" class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribir el codigo, ejemplo C0001" /></td>
+        </tr>
+        <tr>
+          <td>Nombre:</td>
+          <td><input id="nombre" type="text" class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingresa el nombre del producto" /></td>
+        </tr>
+        <tr>
+          <td>Precio:</td>
+          <td><input id="precio" type="number" class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingresa el precio, por ejemplo 1599" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button id="agregar" type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded">Agregar</button></td>
+        </tr>
+      </table>
+    </form>
+
+    <br /><br /><br />
+
+    <div class="text-center"> 
+      <span class="text-green-600 text-3xl">Productos cargados</h1>
+    </div>
+        
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+          <th scope="col" class="px-6 py-3">Código</th>
+          <th scope="col" class="px-6 py-3">Nombre</th>
+          <th scope="col" class="px-6 py-3">Precio</th>
+          <th scope="col" class="px-6 py-3">Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="productosBody">        
+      </tbody>
+    </table>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
